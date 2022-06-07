@@ -1,5 +1,9 @@
 {
-  "name": "react-modele",
+  "name": "managetavie.com-project",
+  "author": "Bertrand Peltier",
+  "version": "2.0.0",
+  "licence": "UNLICENSED",
+  "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
