@@ -6,10 +6,35 @@
 $enable-shadows: true;
 
 $theme-colors: (
-  "primary": #376c7a,
-  "primary-light": red,
-  "secondary": #f9cb3a
+  "primary-blue": vars.$primary-blue,
+  "primary-yellow": vars.$primary-yellow,
+  "primary-light-blue": vars.$primary-light-blue,
+  "primary-dark-blue": vars.$primary-dark-blue,
+  "secondary-blue": vars.$secondary-blue,
+  "secondary-yellow": vars.$secondary-yellow,
+  "secondary-light-blue": vars.$secondary-light-blue,
+  "associate-red": vars.$associate-red,
+  "associate-pink": vars.$associate-pink,
+  "associate-light-pink": vars.$associate-light-pink,
 );
 
 
 @import "~bootstrap/scss/bootstrap";
+
+// Polices
+.title {
+  font-family: "MerriweatherSansBold";
+}
+.subtitle {
+  font-family: "Merriweather";
+}
+.quote {
+  font-family: "MerriweatherSansLight";
+}
+.text {
+  font-family: "Montserrat";
+}
+.action {
+  font-family: "playlistscript";
+  text-transform: lowercase;
+}

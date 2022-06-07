@@ -9,7 +9,9 @@ import './styles.scss';
 const Main = () => (
   <div className="main">
     <Router />
-    <div className="main__top" />
+    <div className="main__top">
+      <h1 className="text text-associate-red">Test</h1>
+    </div>
     <Navbar bg="primary" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
