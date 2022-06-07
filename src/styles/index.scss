@@ -1,2 +1,15 @@
 @use 'reset';
 @use 'vars';
+
+// Custom bootstrap
+
+$enable-shadows: true;
+
+$theme-colors: (
+  "primary": #376c7a,
+  "primary-light": red,
+  "secondary": #f9cb3a
+);
+
+
+@import "~bootstrap/scss/bootstrap";

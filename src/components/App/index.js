@@ -1,15 +1,13 @@
-// == Import npm
 import React from 'react';
 
-// == Import
+import { Button } from 'react-bootstrap/';
 import './styles.scss';
 
-// == Composant
 const App = () => (
   <div className="app">
-    <h1>Composant : App</h1>
+    <h1 className="shadow text-primary-light">Composant : App</h1>
+    <Button>Click</Button>
   </div>
 );
 
-// == Export
 export default App;
