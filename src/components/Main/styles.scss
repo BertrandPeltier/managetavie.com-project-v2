@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+
+.main {
+  &__top {
+    background-color: var(--bs-secondary);
+    height: 15rem;
+  }
+  &__bottom {
+    background-color: var(--bs-secondary);
+    height: 200vh;
+  }
+}
