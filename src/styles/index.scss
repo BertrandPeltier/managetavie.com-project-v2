@@ -2,7 +2,6 @@
 @use 'vars';
 
 // Custom bootstrap
-
 $enable-shadows: true;
 
 $theme-colors: (
@@ -17,7 +16,6 @@ $theme-colors: (
   "associate-pink": vars.$associate-pink,
   "associate-light-pink": vars.$associate-light-pink,
 );
-
 
 @import "~bootstrap/scss/bootstrap";
 
