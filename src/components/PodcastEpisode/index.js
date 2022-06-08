@@ -46,14 +46,14 @@ const PodcastEpisode = ({ episodes }) => {
   const toPrevTrack = () => {
     if (!navigation.previous) {
       setTrackIndex(trackIndex - 1);
-      navigate(`/episode/${trackIndex - 1}`);
+      navigate(`/podcast/episode/${trackIndex - 1}`);
     }
   };
 
   const toNextTrack = () => {
     if (!navigation.next) {
       setTrackIndex(trackIndex + 1);
-      navigate(`/episode/${trackIndex + 1}`);
+      navigate(`/podcast/episode/${trackIndex + 1}`);
     }
   };
 

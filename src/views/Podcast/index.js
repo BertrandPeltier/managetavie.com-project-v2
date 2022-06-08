@@ -1,15 +1,18 @@
 import React from 'react';
-import useFetchPodcastData from 'src/hooks/useFetchPodcastData';
+import useFetchData from 'src/hooks/useFetchData';
+import { podcast } from 'src/api';
 
 import PodcastPlaylist from 'src/components/PodcastPlaylist';
 
 import './styles.scss';
 
 const Podcast = () => {
+  const { get } = podcast;
   const {
     data,
     loading,
-  } = useFetchPodcastData('/episode/all');
+    failed,
+  } = useFetchData(get, '/episode/all');
   return (
     <>
       {
