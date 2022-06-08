@@ -12,7 +12,9 @@ const Podcast = () => {
     <>
       {
         loading ? (
-          <h1 className="title text-associate-red">LOADING</h1>
+          <div className="dot-container">
+            <div className="dot-spin--blue" />
+          </div>
         ) : (
           data.episodes.map((episode) => (
             <h2 className="title text-primary-blue">{episode.title}</h2>

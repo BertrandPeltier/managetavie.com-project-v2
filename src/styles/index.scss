@@ -1,9 +1,10 @@
 @use 'reset';
 @use 'vars';
+@use 'mixins';
 
 // Custom bootstrap
 $enable-shadows: true;
-
+$enable-responsive-font-sizes: true;
 $theme-colors: (
   "primary-blue": vars.$primary-blue,
   "primary-yellow": vars.$primary-yellow,
@@ -35,4 +36,17 @@ $theme-colors: (
 .action {
   font-family: "playlistscript";
   text-transform: lowercase;
+}
+
+// dot spin
+.dot-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Dot spin */
+.dot-spin--blue {
+  @include mixins.dot-spin (vars.$primary-yellow);
 }
