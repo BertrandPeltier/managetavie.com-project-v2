@@ -3,6 +3,8 @@ import {
   Routes, Route,
 } from 'react-router-dom';
 
+import Podcast from 'src/views/Podcast';
+
 const Router = () => (
   <Routes>
     <Route
@@ -11,7 +13,7 @@ const Router = () => (
     />
     <Route
       path="/podcast"
-      element=""
+      element={<Podcast />}
     />
   </Routes>
 );
