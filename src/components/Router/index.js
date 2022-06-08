@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 
 import Podcast from 'src/views/Podcast';
+import Episode from 'src/views/Episode';
 
 const Router = () => (
   <Routes>
@@ -14,6 +15,10 @@ const Router = () => (
     <Route
       path="/podcast"
       element={<Podcast />}
+    />
+    <Route
+      path="/podcast/episode/:episodeId"
+      element={<Episode />}
     />
   </Routes>
 );

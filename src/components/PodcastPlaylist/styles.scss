@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+
+.playlist {
+  justify-content: center;
+  .item {
+    &__timestamp {
+      font-size: 1em;
+      color: vars.$primary-blue;
+      text-align: center;
+    }
+    &__card {
+      cursor: pointer;
+      border: none;
+      border-radius: 20px !important;
+      &:hover {
+        box-shadow: none !important;
+      }
+    }
+    &__caption {
+      border-radius: 20px;
+    }
+  } 
+}
+
+

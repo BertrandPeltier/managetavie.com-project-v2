@@ -1,11 +1,11 @@
 import React from 'react';
 import useFetchPodcastData from 'src/hooks/useFetchPodcastData';
 
-import PodcastPlaylist from 'src/components/PodcastPlaylist';
+import PodcastEpisode from 'src/components/PodcastEpisode';
 
 import './styles.scss';
 
-const Podcast = () => {
+const Episode = () => {
   const {
     data,
     loading,
@@ -20,7 +20,7 @@ const Podcast = () => {
         ) : (
           <>
             <h1>Podcast</h1>
-            <PodcastPlaylist episodes={data.episodes} />
+            <PodcastEpisode episodes={data.episodes} />
           </>
         )
       }
@@ -28,4 +28,4 @@ const Podcast = () => {
   );
 };
 
-export default Podcast;
+export default Episode;

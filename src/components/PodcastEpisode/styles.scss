@@ -1,0 +1,134 @@
+@use 'src/styles/vars';
+
+.episode {
+  @media screen and (min-width: 768px) {
+    width: 30rem;
+  }
+  &__header {
+    background-color: #FFF;
+  }
+  &__title {
+    text-align: center;
+    &--yellow {
+      color: vars.$primary-yellow;
+    }
+    &--blue {
+      color: vars.$primary-blue;
+    }
+    span {
+      font-weight: normal;
+      font-size: 1.5rem;
+      font-family: "MerriweatherSansBold";
+    }
+  }
+  &__footer {
+    .back-link {
+      cursor: pointer;
+      color: vars.$primary-blue;
+      text-decoration: none;
+    }
+  }
+  &__body {
+
+    .detail {
+      color: vars.$primary-blue;
+    }
+    .audio-control {
+      text-align: center;
+      &__icon {
+        cursor: pointer;
+        &--yellow {
+          color: vars.$primary-yellow;
+        }
+        &--blue {
+          color: vars.$primary-blue;
+        }
+        &--disable {
+          color: lightgray;
+          cursor: default;
+        }
+      }
+    }
+
+    .timestamp {
+      display: flex;
+      justify-content: space-between;
+      font-family: "MerriweatherSansBold";
+      font-size: 1.2rem;
+      &--yellow {
+        color: vars.$primary-yellow;
+      }
+      &--blue {
+        color: vars.$primary-blue;
+      }
+    }
+
+    .control-time{
+      cursor: pointer;
+      &--yellow {
+        &::-webkit-slider-thumb{
+          background: vars.$primary-yellow;
+        }
+        &::-webkit-slider-runnable-track {
+          background: linear-gradient(
+            to right,
+            vars.$primary-light-blue,
+            vars.$primary-blue
+          );
+        }
+        &::-moz-range-thumb {
+          background: vars.$primary-yellow;
+        }
+        &::-moz-range-track {
+          background: linear-gradient(
+            to right,
+            vars.$primary-light-blue,
+            vars.$primary-blue
+          );
+        }
+        &::-ms-thumb {
+          background: vars.$primary-yellow;
+        }
+        &::-ms-track {
+          background: linear-gradient(
+            to right,
+            vars.$primary-light-blue,
+            vars.$primary-blue
+          );
+        }
+      }
+      &--blue {
+        &::-webkit-slider-thumb{
+          background: vars.$primary-blue;
+        }
+        &::-webkit-slider-runnable-track {
+          background: linear-gradient(
+            to right,
+            vars.$secondary-yellow,
+            vars.$primary-yellow
+          );
+        }
+        &::-moz-range-thumb {
+          background: vars.$primary-blue;
+        }
+        &::-moz-range-track {
+          background: linear-gradient(
+            to right,
+            vars.$secondary-yellow,
+            vars.$primary-yellow
+          );
+        }
+        &::-ms-thumb {
+          background: vars.$primary-blue;
+        }
+        &::-ms-track {
+          background: linear-gradient(
+            to right,
+            vars.$secondary-yellow,
+            vars.$primary-yellow
+          );
+        }
+      }
+    }
+  }
+}
