@@ -10,14 +10,24 @@ const Accueil = () => {
 
   return (
     <div className="accueil">
-      <Container>
+      <Container className="section-one">
         <Row>
           <Col>Logo</Col>
           <Col>
             <h1 className="text-white title">Que dirais-tu d'être (vraiment) heureux ?</h1>
-            <Button className="action" variant="primary-yellow">Bzzz c'est par ici !</Button>
+            <Button
+              className="action"
+              variant="primary-yellow"
+              // onClick={scrollToSection(myRef)}
+              onClick={() => window.scrollTo({ behavior: 'smooth', top: myRef.current.offsetTop })}
+            >
+              Bzzz c'est par ici !
+            </Button>
           </Col>
         </Row>
+      </Container>
+      <Container ref={myRef} className="section-two">
+        <h1>Menu</h1>
       </Container>
     </div>
     // <div className="container">

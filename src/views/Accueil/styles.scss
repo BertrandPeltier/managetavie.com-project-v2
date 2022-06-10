@@ -1,10 +1,16 @@
 @use 'src/styles/vars';
 
 .accueil {
-  width: 100vw;
-  height: 100vh;
-  background-color: vars.$primary-blue;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  .section-one {
+    width: 100vw;
+    height: 100vh;
+    background-color: vars.$primary-blue;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .section-two {
+    width: 100vw;
+    height: 100vh;
+  }
 }
