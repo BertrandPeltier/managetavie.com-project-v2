@@ -1,12 +1,15 @@
 import React, { useRef } from 'react';
 
 import {
-  Container, Row, Col, Button
+  Container, Row, Col, Button,
 } from 'react-bootstrap/';
 import './styles.scss';
 
 const Accueil = () => {
-  const myRef = useRef();
+  const sectionRef = useRef();
+  const scrollToSection = (ref) => {
+    window.scrollTo({ behavior: 'smooth', top: ref.current.offsetTop });
+  };
 
   return (
     <div className="accueil">
@@ -18,15 +21,14 @@ const Accueil = () => {
             <Button
               className="action"
               variant="primary-yellow"
-              // onClick={scrollToSection(myRef)}
-              onClick={() => window.scrollTo({ behavior: 'smooth', top: myRef.current.offsetTop })}
+              onClick={() => scrollToSection(sectionRef)}
             >
               Bzzz c'est par ici !
             </Button>
           </Col>
         </Row>
       </Container>
-      <Container ref={myRef} className="section-two">
+      <Container ref={sectionRef} className="section-two">
         <h1>Menu</h1>
       </Container>
     </div>
