@@ -50,3 +50,11 @@ $theme-colors: (
 .dot-spin--blue {
   @include mixins.dot-spin (vars.$primary-yellow);
 }
+
+// lighted
+.lighted--white {
+  @include mixins.lighted(white);
+}
+.lighted--yellow {
+  @include mixins.lighted(vars.$secondary-yellow);
+}

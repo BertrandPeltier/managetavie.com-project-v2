@@ -1,5 +1,11 @@
 @use 'vars';
 
+/* Lighted */
+@mixin lighted($lighted-color) {
+  background: linear-gradient(0deg, $lighted-color 65%, transparent 35%);
+  padding: 0.2rem;
+}
+
 /* Dot Spin */
 @mixin dot-spin($dot-color) {
   position: relative;
