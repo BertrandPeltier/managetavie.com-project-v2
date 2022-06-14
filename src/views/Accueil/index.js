@@ -3,9 +3,12 @@ import React, { useRef } from 'react';
 import {
   Container, Row, Col, Button, Navbar, Nav, NavDropdown,
 } from 'react-bootstrap/';
+import Icon from '@mdi/react';
+import { mdiChevronDown } from '@mdi/js';
 import './styles.scss';
 
 const Accueil = () => {
+  // Scroll to
   const sectionRef = useRef();
   const scrollToSection = (ref) => {
     window.scrollTo({ behavior: 'smooth', top: ref.current.offsetTop });
@@ -13,7 +16,7 @@ const Accueil = () => {
 
   return (
     <div className="accueil">
-      <Container className="section-one">
+      <Container fluid as="section" className="section-one">
         <Row>
           <Col>Logo</Col>
           <Col>
@@ -27,8 +30,16 @@ const Accueil = () => {
             </Button>
           </Col>
         </Row>
+        <div className="section-one__footer nuage bg-white" />
+        <Icon
+          className="section-one__footer chevron"
+          path={mdiChevronDown}
+          size={2}
+          aria-label="Scroll to next section"
+          onClick={() => scrollToSection(sectionRef)}
+        />
       </Container>
-      <Navbar collapseOnSelect expand="lg" sticky="top">
+      <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white">
         <Container>
           <Navbar.Brand href="#home">Manage at Vie</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -44,12 +55,13 @@ const Accueil = () => {
               <Nav.Link href="#pricing">Contenus inspirants</Nav.Link>
               <Nav.Link href="#pricing">Podcast</Nav.Link>
               <Nav.Link href="#pricing">Ateliers</Nav.Link>
-              <Nav.Link href="#pricing">À propos</Nav.Link>
+              <Nav.Link href="#pricing" onClick={() => console.log(window.scrollY)}>À propos</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container ref={sectionRef} className="section-two">
+      <Container as="section" ref={sectionRef} className="section-two">
+        <Row as="div" className="section-two__gutterup" />
         <Row className="bg-secondary-yellow text-center py-3">
           <h1 className="title">Reprends les commandes<br />pour <span className="lighted--white">profitez de ta vie</span></h1>
           <h2>pas demain, plus tard ou un jour peut-être !</h2>
@@ -59,7 +71,7 @@ const Accueil = () => {
           </p>
         </Row>
       </Container>
-      <Container className="section-three">
+      <Container as="section" className="section-three">
         <h1>Section 3</h1>
       </Container>
     </div>

@@ -2,20 +2,46 @@
 
 .accueil {
   .section-one {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: vars.$primary-blue;
     display: flex;
     align-items: center;
     text-align: center;
+    .row {
+      width: 100%;
+    }
+    &__footer {
+      position: absolute;
+    }
+    .nuage {
+      left: 0;
+      bottom: 0;
+      height: 4rem;
+      width: 100%;
+    }
+    .chevron {
+      color:  vars.$primary-yellow;
+      left: 50%;
+      bottom: 10%;
+      cursor: pointer;
+    }
   }
   .section-two {
     width: 100vw;
     height: 100vh;
+    &__gutterup {
+      height: 4rem;
+    }
   }
   .section-three {
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
   }
+}
+
+.big {
+  padding: 2rem;
 }
