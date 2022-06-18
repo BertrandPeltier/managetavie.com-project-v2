@@ -9,8 +9,12 @@
     display: flex;
     align-items: center;
     text-align: center;
-    .row {
-      width: 100%;
+    &__content {
+      display: flex;
+      align-items: center;
+      .logo-montgolfiere {
+        width: 25rem;
+      }
     }
     &__footer {
       position: absolute;

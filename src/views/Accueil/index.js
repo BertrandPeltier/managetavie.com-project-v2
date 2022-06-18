@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 
 import {
-  Container, Row, Col, Button, Navbar, Nav, NavDropdown,
+  Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown,
 } from 'react-bootstrap/';
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
+import logoMontgolfiere from './logo-mtv-montgolfiere.png';
 import './styles.scss';
 
 const Accueil = () => {
@@ -16,29 +17,41 @@ const Accueil = () => {
 
   return (
     <div className="accueil">
-      <Container fluid as="section" className="section-one">
-        <Row>
-          <Col>Logo</Col>
-          <Col>
-            <h1 className="text-white title">Que dirais-tu d'être (vraiment) heureux ?</h1>
-            <Button
-              className="action"
-              variant="primary-yellow"
-              onClick={() => scrollToSection(sectionRef)}
-            >
-              Bzzz c'est par ici !
-            </Button>
-          </Col>
-        </Row>
-        <div className="section-one__footer nuage bg-white" />
-        <Icon
-          className="section-one__footer chevron"
-          path={mdiChevronDown}
-          size={2}
-          aria-label="Scroll to next section"
-          onClick={() => scrollToSection(sectionRef)}
-        />
-      </Container>
+      <section className="section-one">
+        <Container>
+          <Row
+            className="section-one__content"
+            xs={1}
+            md={2}
+          >
+            <Col>
+              <Image
+                className="logo-montgolfiere"
+                src={logoMontgolfiere}
+                fluid
+              />
+            </Col>
+            <Col>
+              <h1 className="text-white title">Que dirais-tu d'être<br />(vraiment) heureux ?</h1>
+              <Button
+                className="action"
+                variant="primary-yellow"
+                onClick={() => scrollToSection(sectionRef)}
+              >
+                Bzzz c'est par ici !
+              </Button>
+            </Col>
+          </Row>
+          <div className="section-one__footer nuage bg-white" />
+          <Icon
+            className="section-one__footer chevron"
+            path={mdiChevronDown}
+            size={2}
+            aria-label="Scroll to next section"
+            onClick={() => scrollToSection(sectionRef)}
+          />
+        </Container>
+      </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white">
         <Container>
           <Navbar.Brand href="#home">Manage at Vie</Navbar.Brand>
