@@ -29,11 +29,22 @@
       width: 100%;
       &__chevron {
         cursor: pointer;
+        position: relative;
+        z-index: 10;
         color: vars.$primary-yellow;
       }
-      &__cloods {
+      &__bottom {
         height: 4rem;
         background-color: white;
+      }
+      &__cloods {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        bottom: -6rem;
+        @media screen and (max-width: 767px) {
+          bottom: 0;
+        }
       }
     }
   }

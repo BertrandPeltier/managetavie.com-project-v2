@@ -6,6 +6,7 @@ import {
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import montgolfiere from './montgolfiere.webp';
+import cloods from './cloods.webp';
 
 import './styles.scss';
 
@@ -44,13 +45,18 @@ const Accueil = () => {
           </Row>
           <footer className="footer">
             <Icon
-              className="footer__chevron mb-3"
+              className="footer__chevron mb-5"
               path={mdiChevronDown}
               size={2}
               aria-label="Scroll to next section"
               onClick={() => scrollToSection(sectionRef)}
             />
-            <div className="footer__cloods" />
+            <div className="footer__bottom" />
+            <Image
+              className="footer__cloods"
+              src={cloods}
+              fluid
+            />
           </footer>
         </Container>
       </section>
