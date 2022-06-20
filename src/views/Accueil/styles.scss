@@ -27,18 +27,14 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      svg {
-        position: absolute;
-        bottom: 50px;
+      &__chevron {
         cursor: pointer;
         color: vars.$primary-yellow;
       }
-    }
-    .nuage {
-      left: 0;
-      bottom: 0;
-      height: 4rem;
-      width: 100%;
+      &__cloods {
+        height: 4rem;
+        background-color: white;
+      }
     }
   }
   .section-two {

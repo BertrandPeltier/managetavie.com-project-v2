@@ -44,15 +44,14 @@ const Accueil = () => {
           </Row>
           <footer className="footer">
             <Icon
-              className="section-one__footer chevron"
+              className="footer__chevron mb-3"
               path={mdiChevronDown}
               size={2}
               aria-label="Scroll to next section"
               onClick={() => scrollToSection(sectionRef)}
             />
+            <div className="footer__cloods" />
           </footer>
-
-          {/* <div className="section-one__footer nuage bg-white" /> */}
         </Container>
       </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white">
