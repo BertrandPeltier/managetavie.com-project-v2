@@ -45,7 +45,7 @@ const Accueil = () => {
           </Row>
           <footer className="footer">
             <Icon
-              className="footer__chevron mb-5"
+              className="footer__chevron mb-5 bounce"
               path={mdiChevronDown}
               size={2}
               aria-label="Scroll to next section"
