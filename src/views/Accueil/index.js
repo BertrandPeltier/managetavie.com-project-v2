@@ -5,7 +5,8 @@ import {
 } from 'react-bootstrap/';
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
-import logoMontgolfiere from './logo-mtv-montgolfiere.png';
+import montgolfiere from './montgolfiere.webp';
+
 import './styles.scss';
 
 const Accueil = () => {
@@ -17,24 +18,23 @@ const Accueil = () => {
 
   return (
     <div className="accueil">
-      <section className="section-one">
+      <section className="section1">
         <Container>
-          <Row
-            className="section-one__content"
-            xs={1}
-            md={2}
-          >
-            <Col>
+          <Row className="main" xs={1} md={2}>
+            <Col
+              className="main__logo"
+            >
               <Image
-                className="logo-montgolfiere"
-                src={logoMontgolfiere}
+                src={montgolfiere}
                 fluid
               />
             </Col>
-            <Col>
-              <h1 className="text-white title">Que dirais-tu d'être<br />(vraiment) heureux ?</h1>
+            <Col
+              className="main__title"
+            >
+              <h1 className="text-white text-title">Que dirais-tu d'être<br />(vraiment) heureux ?</h1>
               <Button
-                className="action"
+                className="text-action"
                 variant="primary-yellow"
                 onClick={() => scrollToSection(sectionRef)}
               >
@@ -42,14 +42,17 @@ const Accueil = () => {
               </Button>
             </Col>
           </Row>
-          <div className="section-one__footer nuage bg-white" />
-          <Icon
-            className="section-one__footer chevron"
-            path={mdiChevronDown}
-            size={2}
-            aria-label="Scroll to next section"
-            onClick={() => scrollToSection(sectionRef)}
-          />
+          <footer className="footer">
+            <Icon
+              className="section-one__footer chevron"
+              path={mdiChevronDown}
+              size={2}
+              aria-label="Scroll to next section"
+              onClick={() => scrollToSection(sectionRef)}
+            />
+          </footer>
+
+          {/* <div className="section-one__footer nuage bg-white" /> */}
         </Container>
       </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white">

@@ -21,20 +21,20 @@ $theme-colors: (
 @import "~bootstrap/scss/bootstrap";
 
 // Polices
-.title {
+.text-title {
   font-family: "MerriweatherSansBold";
   line-height: 150%;
 }
-.subtitle {
+.text-subtitle {
   font-family: "Merriweather";
 }
-.quote {
+.text-quote {
   font-family: "MerriweatherSansLight";
 }
-.text {
+.text-simple {
   font-family: "Montserrat";
 }
-.action {
+.text-action {
   font-family: "playlistscript";
   text-transform: lowercase;
 }

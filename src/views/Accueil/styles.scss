@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .accueil {
-  .section-one {
+  .section1 {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -9,15 +9,24 @@
     display: flex;
     align-items: center;
     text-align: center;
-    &__content {
+
+    .main {
       display: flex;
       align-items: center;
-      .logo-montgolfiere {
-        width: 25rem;
+      &__logo {
+        img {
+          width: 25rem;
+          @media screen and (max-width: 767px) {
+            width: 15rem;
+          }
+        }
       }
     }
-    &__footer {
+    .footer {
       position: absolute;
+      bottom: 50px;
+      left: 0;
+      width: 100%;
     }
     .nuage {
       left: 0;
