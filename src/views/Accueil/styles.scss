@@ -54,15 +54,28 @@
         bottom: -6rem;
         @media screen and (max-width: 767px) {
           bottom: 0;
+          max-width: 100vw;
         }
       }
     }
   }
-  .section-two {
+  .section2 {
     width: 100vw;
-    height: 100vh;
-    &__gutterup {
+    .gutter-up {
       height: 4rem;
+    }
+    .main {
+      &__part1 {
+
+      }
+      &__part2 {
+        justify-content: center;
+        ul {
+          line-height: 200%;
+          text-align: left;
+        }
+        
+      }
     }
   }
   .section-three {
