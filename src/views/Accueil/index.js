@@ -7,6 +7,7 @@ import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import montgolfiere from './montgolfiere.webp';
 import cloods from './cloods.webp';
+import checkbox from './checkbox.webp';
 
 import 'animate.css';
 import './styles.scss';
@@ -95,10 +96,10 @@ const Accueil = () => {
           </Row>
           <Row className="main__part2 bg-primary-blue text-center py-5 mx-0">
             <Col as="ul" xs={12} md={4} className="text-title text-white fs-4">
-              <li>* Révèle ton plein potentiel</li>
-              <li>* Épanouis-toi dans ton job</li>
-              <li>* Préserve ton temps libre</li>
-              <li>* Et surtout, garde le sourire</li>
+              <li><Image src={checkbox} className="mx-3 mb-3" />Révèle ton plein potentiel</li>
+              <li><Image src={checkbox} className="mx-3 mb-3" />Épanouis-toi dans ton job</li>
+              <li><Image src={checkbox} className="mx-3 mb-3" />Préserve ton temps libre</li>
+              <li><Image src={checkbox} className="mx-3 mb-3" />Et surtout, garde le sourire</li>
             </Col>
           </Row>
           <Row className="main__part3 bg-secondary-light-blue text-center py-5 mx-0">
