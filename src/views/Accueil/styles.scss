@@ -7,91 +7,46 @@
     height: 100vh;
     background-color: vars.$primary-blue;
     display: flex;
-    align-items: center;
-    text-align: center;
-
-    .main {
+    flex-direction: column;
+    &__main {
+      text-align: center;
       display: flex;
       align-items: center;
+      flex: 1;
+      .row {
+        flex: 1;
+      }
       &__logo {
-        img {
-          width: 25rem;
-          animation: zoomIn 2s;
-          -webkit-animation: zoomIn 2s;
-          -moz-animation: zoomIn 2s;
-          -o-animation: zoomIn 2s;
-          @media screen and (max-width: 767px) {
-            width: 15rem;
-          }
+        width: 25rem;
+        animation: zoomIn 2s;
+        -webkit-animation: zoomIn 2s;
+        -moz-animation: zoomIn 2s;
+        -o-animation: zoomIn 2s;
+        @media screen and (max-width: 767px) {
+          width: 15rem;
         }
       }
     }
-    .footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    &__footer {
+      text-align: center;
       &__chevron {
-        cursor: pointer;
-        position: relative;
-        z-index: 10;
         color: vars.$primary-yellow;
-        &:hover {
-          animation: bounce 1.5s infinite;
-          -webkit-animation: bounce 1.5s infinite;
-          -moz-animation: bounce 1.5s infinite;
-          -o-animation: bounce 1.5s infinite;
-        }
+        cursor: pointer;
       }
-      &__bottom {
+      &__white-stripe {
         height: 4rem;
         background-color: white;
+        width: 100%;
       }
-      &__cloods {
-        position: absolute;
-        z-index: 5;
-        left: 0;
-        bottom: -6rem;
-        @media screen and (max-width: 767px) {
-          bottom: 0;
-          max-width: 100vw;
-        }
+    }
+    &__cloods {
+      width: 50%;
+      position: absolute;
+      bottom: -6rem;
+      @media screen and (max-width: 767px) {
+        bottom: 2rem;
+        width: 75%;
       }
     }
   }
-  .section2 {
-    width: 100vw;
-    .gutter-up {
-      height: 4rem;
-    }
-    .main {
-      &__part1 {
-
-      }
-      &__part2 {
-        justify-content: center;
-        ul {
-          line-height: 200%;
-          text-align: left;
-        }
-        
-      }
-    }
-  }
-  .section-three {
-    width: 100vw;
-    height: 100vh;
-    background-color: lightgray;
-  }
-}
-
-.big {
-  padding: 2rem;
-}
-
-.bounce {
-	animation: bounce 2s infinite;
-	-webkit-animation: bounce 2s infinite;
-	-moz-animation: bounce 2s infinite;
-	-o-animation: bounce 2s infinite;
 }
