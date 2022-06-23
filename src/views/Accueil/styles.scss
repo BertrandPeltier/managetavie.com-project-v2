@@ -40,12 +40,12 @@
       }
     }
     &__cloods {
-      width: 50%;
+      width: 50vw;
       position: absolute;
-      bottom: -6rem;
+      bottom: 2rem;
       @media screen and (max-width: 767px) {
-        bottom: 2rem;
-        width: 75%;
+        width: 75vw;
+        bottom: 4rem;
       }
     }
   }
