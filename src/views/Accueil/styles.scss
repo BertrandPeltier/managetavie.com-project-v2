@@ -5,7 +5,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: vars.$primary-blue;
     display: flex;
     flex-direction: column;
     &__main {
@@ -46,6 +45,20 @@
       @media screen and (max-width: 767px) {
         width: 75vw;
         bottom: 4rem;
+      }
+    }
+  }
+
+  .section2 {
+    height: 100vh;
+    &__header {
+      height: 4rem;
+    }
+    &__main {
+      &__part2 {
+      }
+      &__part3 {
+        text-align: justify;
       }
     }
   }
