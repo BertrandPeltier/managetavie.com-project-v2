@@ -98,8 +98,8 @@ const Accueil = () => {
           </div>
           <div className="section2__main__part2 bg-primary-blue">
             <Container>
-              <Row className="text-justify py-5">
-                <Col as="ul" className="text-title text-white fs-4">
+              <Row className="text-justify py-5 justify-content-center">
+                <Col md="auto" as="ul" className="text-title text-white fs-4">
                   <li><Image src={checkbox} className="mx-3 mb-3" />Révèle ton plein potentiel</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Épanouis-toi dans ton job</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Préserve ton temps libre</li>
