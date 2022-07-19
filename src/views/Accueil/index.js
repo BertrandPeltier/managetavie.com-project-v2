@@ -108,16 +108,20 @@ const Accueil = () => {
               </Row>
             </Container>
           </div>
-          <Row className="section2__main__part3 bg-secondary-light-blue py-5 mx-0">
-            <Col xs={12} md={6} className="mx-3">
-              <h2 className="text-title">Bienvenue<br />dans l'univers Manage ta Vie</h2>
-              <h3 className="text-quote">Je suis Vanessa Rocherieux</h3>
-              <p>
-                Fondatrice de Manage ta Vie, coach, formatrice et sophrologue
-                spécialisée en bien-être Professionnel
-              </p>
-            </Col>
-          </Row>
+          <div className="section2__main__part3 bg-secondary-light-blue">
+            <Container>
+              <Row className="py-5">
+                <Col xs={12} md={6}>
+                  <h2 className="text-title">Bienvenue<br />dans l'univers Manage ta Vie</h2>
+                  <h3 className="text-quote">Je suis Vanessa Rocherieux</h3>
+                  <p>
+                    Fondatrice de Manage ta Vie, coach, formatrice et sophrologue
+                    spécialisée en bien-être Professionnel
+                  </p>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </main>
       </section>
     </div>
