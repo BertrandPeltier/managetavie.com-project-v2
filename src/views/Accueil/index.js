@@ -9,6 +9,7 @@ import montgolfiere from './montgolfiere.webp';
 import cloods from './cloods.webp';
 import checkbox from './checkbox.webp';
 import logoMTV from './logo-managetavie.webp';
+import vanessaBureau from './vanessa-bureau.webp';
 
 import 'animate.css';
 import './styles.scss';
@@ -117,11 +118,11 @@ const Accueil = () => {
           </div>
           <div className="section2__main__part3 bg-secondary-light-blue">
             <Container>
-              <Row className="py-5">
+              <Row className="">
                 <Col xs={12} md={6}>
                   <h2 className="text-title">Bienvenue<br />dans l'univers Manage ta Vie</h2>
                   <h3 className="text-quote">Je suis Vanessa Rocherieux</h3>
-                  <p>
+                  <p className="section2__main__part3__text">
                     Fondatrice de Manage ta Vie, coach, formatrice et sophrologue
                     spécialisée en bien-être Professionnel
                   </p>
@@ -130,6 +131,11 @@ const Accueil = () => {
             </Container>
           </div>
         </main>
+        <Image
+          className="section2__image"
+          src={vanessaBureau}
+          fluid
+        />
       </section>
     </div>
   );

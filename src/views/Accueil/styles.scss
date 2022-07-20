@@ -55,7 +55,7 @@
   }
 
   .section2 {
-    height: 100vh;
+    position: relative;
     &__header {
       height: 4rem;
     }
@@ -64,7 +64,18 @@
       }
       &__part3 {
         text-align: justify;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        &__text {
+          width: 75%;
+        }
       }
+    }
+    &__image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
     }
   }
 }
