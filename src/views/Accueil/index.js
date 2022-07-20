@@ -3,13 +3,18 @@ import React, { useRef } from 'react';
 import {
   Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown,
 } from 'react-bootstrap/';
+// section1
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import montgolfiere from './montgolfiere.webp';
 import cloods from './cloods.webp';
+// section2
 import checkbox from './checkbox.webp';
 import logoMTV from './logo-managetavie.webp';
 import vanessaBureau from './vanessa-bureau.webp';
+// section3
+import abeillePfieuw from './abeille-pfieuw.webp';
+import abeilleTrapeze from './abeille-trapeze.webp';
 
 import 'animate.css';
 import './styles.scss';
@@ -34,11 +39,11 @@ const Accueil = () => {
               />
             </Col>
             <Col className="my-auto">
-              <h1 className="section1__main__title text-white text-title">
+              <h1 className="section1__main__title text-white text-title mb-5">
                 Et si tu commençais<br />à kiffer ton quotidien ?
               </h1>
               <Button
-                className="section1__main__action-button text-action"
+                className="section1__main__action-button text-action text-primary-dark-blue fs-2"
                 variant="primary-yellow"
                 onClick={() => scrollToSection(section2)}
               >
@@ -92,7 +97,7 @@ const Accueil = () => {
       <section ref={section2} className="section2">
         <header className="section2__header" />
         <main className="section2__main">
-          <div className="section2__main__part1 bg-secondary-yellow">
+          <div className="section2__main__part1 bg-secondary-yellow text-primary-dark-blue">
             <Container>
               <Row className="text-center py-5">
                 <h2 className="text-title">Reprends les commandes<br />pour <span className="lighted--white">profitez de ta vie</span></h2>
@@ -116,7 +121,7 @@ const Accueil = () => {
               </Row>
             </Container>
           </div>
-          <div className="section2__main__part3 bg-secondary-light-blue">
+          <div className="section2__main__part3 bg-secondary-light-blue text-primary-dark-blue">
             <Container>
               <Row className="">
                 <Col xs={12} md={6}>
@@ -136,6 +141,60 @@ const Accueil = () => {
           src={vanessaBureau}
           fluid
         />
+      </section>
+      <section className="section3">
+        <header className="section3__header text-primary-dark-blue text-center py-4">
+          <h2 className="text-title section3__header__title">Dans la vie</h2>
+          <h3 className="text-quote">tu as le choix ...</h3>
+        </header>
+        <main className="section3__main">
+          <Container>
+            <Row>
+              <Col xs={12} md={4} className="text-primary-dark-blue section3__main__col1">
+                <Image
+                  className="section3__main__image1"
+                  src={abeillePfieuw}
+                  fluid
+                />
+                <h2 className="text-title">Continuer de ...</h2>
+                <p>
+                  Subir ton quotidien.
+                  Suffoquer par la charge mentale, les doutes et le stress.
+                  Sacrifier ton temps libre et ta vie personnelle.
+                  Culpabiliser de te reposer.
+                </p>
+              </Col>
+              <Col xs={12} md={4}>
+                <Image
+                  className="section3__main__image2"
+                  src={abeilleTrapeze}
+                  fluid
+                />
+              </Col>
+              <Col xs={12} md={4}>
+                <h2 className="text-title text-primary-yellow">Changer</h2>
+                <h3 className="text-subtitle text-primary-yellow">pour...</h3>
+                <p className="fw-bold text-primary-dark-blue">Disposer de ton temps<br /><span className="fw-normal">et ne plus te laisser submerger</span></p>
+                <p className="fw-bold text-primary-dark-blue">Sculpter ton quotidien<br /><span className="fw-normal">comme tu l’entends</span></p>
+                <p className="fw-bold text-primary-dark-blue">Remettre de la légèreté<br /><span className="fw-normal">et du plaisir dans ta vie</span></p>
+                <p className="fw-bold text-primary-dark-blue">Retrouver le sourire</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="py-5 text-center">
+                <Button
+                  className="section3__main__action-button text-action text-primary-dark-blue fs-2"
+                  variant="primary-yellow"
+                >
+                  Réserve ta séance diagnostic (0€)
+                </Button>
+              </Col>
+            </Row>
+          </Container>
+        </main>
+        <footer className="bg-primary-blue text-center py-4">
+          <h2 className="text-title text-white">Avoir tout pour être heureux ne suffit pas pour l'être</h2>
+        </footer>
       </section>
     </div>
   );
