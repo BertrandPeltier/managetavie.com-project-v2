@@ -8,6 +8,7 @@ import { mdiChevronDown } from '@mdi/js';
 import montgolfiere from './montgolfiere.webp';
 import cloods from './cloods.webp';
 import checkbox from './checkbox.webp';
+import logoMTV from './logo-managetavie.webp';
 
 import 'animate.css';
 import './styles.scss';
@@ -33,7 +34,7 @@ const Accueil = () => {
             </Col>
             <Col className="my-auto">
               <h1 className="section1__main__title text-white text-title">
-                Que dirais-tu d'être<br />(vraiment) heureux ?
+                Et si tu commençais<br />à kiffer ton quotidien ?
               </h1>
               <Button
                 className="section1__main__action-button text-action"
@@ -60,9 +61,15 @@ const Accueil = () => {
           src={cloods}
         />
       </section>
-      <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white">
+      <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white main-navbar">
         <Container>
-          <Navbar.Brand href="#home">Manage at Vie</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <Image
+              className="main-navbar__logo"
+              src={logoMTV}
+              fluid
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
