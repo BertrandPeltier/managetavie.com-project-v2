@@ -256,6 +256,16 @@ const Accueil = () => {
           />
         </footer>
       </section>
+      <section ref={section5} className="section5">
+        <header className="section5__header">
+          <h2 className="text-title text-primary-dark-blue">
+            Les ateliers
+          </h2>
+          <h3 className="text-subtitle text-primary-dark-blue">
+            Prends de la hauteur et trouve des solutions à tes problématiques
+          </h3>
+        </header>
+      </section>
     </div>
   );
 };
