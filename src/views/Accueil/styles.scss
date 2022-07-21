@@ -8,7 +8,7 @@
   }
   .section1 {
     position: relative;
-    width: 100vw;
+    // width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@
 
   .section2 {
     position: relative;
-    width: 100vw;
+    // width: 100vw;
     &__header {
       height: 4rem;
     }
@@ -81,7 +81,7 @@
   }
 
   .section3 {
-    width: 100vw;
+    // width: 100vw;
     &__header {
       &__title {
         font-size: 3.5rem;
@@ -98,6 +98,30 @@
       }
       &__image2 {
         margin-bottom: 5rem;
+      }
+    }
+  }
+  
+  .section4 {
+    position: relative;
+    &__main {
+      &__col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &__footer {
+      text-align: center;
+      &__chevron {
+        color: vars.$primary-yellow;
+        cursor: pointer;
+      }
+      &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40%;
       }
     }
   }

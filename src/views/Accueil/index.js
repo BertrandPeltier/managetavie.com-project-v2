@@ -15,13 +15,18 @@ import vanessaBureau from './vanessa-bureau.webp';
 // section3
 import abeillePfieuw from './abeille-pfieuw.webp';
 import abeilleTrapeze from './abeille-trapeze.webp';
+// section4
+import montgolfiereWhite from './montgolfiere-white.webp';
+import cloodsRight from './cloods-right.webp';
 
 import 'animate.css';
 import './styles.scss';
 
 const Accueil = () => {
-  // Scroll to
+  // Scroll to section 2
   const section2 = useRef();
+  // Scroll to section 5
+  const section5 = useRef();
   const scrollToSection = (ref) => {
     window.scrollTo({ behavior: 'smooth', top: ref.current.offsetTop });
   };
@@ -36,6 +41,8 @@ const Accueil = () => {
                 className="section1__main__logo"
                 src={montgolfiere}
                 fluid
+                loading="lazy"
+                decoding="async"
               />
             </Col>
             <Col className="my-auto">
@@ -65,6 +72,8 @@ const Accueil = () => {
         <Image
           className="section1__cloods"
           src={cloods}
+          loading="lazy"
+          decoding="async"
         />
       </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white main-navbar">
@@ -74,6 +83,8 @@ const Accueil = () => {
               className="main-navbar__logo"
               src={logoMTV}
               fluid
+              loading="lazy"
+              decoding="async"
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -113,8 +124,8 @@ const Accueil = () => {
             <Container>
               <Row className="text-justify py-5 justify-content-center">
                 <Col md="auto" as="ul" className="text-title text-white fs-4">
-                  <li><Image src={checkbox} className="mx-3 mb-3" />Révèle ton plein potentiel</li>
-                  <li><Image src={checkbox} className="mx-3 mb-3" />Épanouis-toi dans ton job</li>
+                  <li><Image src={checkbox} className="mx-3 mb-3" />Arrête de subir</li>
+                  <li><Image src={checkbox} className="mx-3 mb-3" />Épanouis-toi dans ta boîte ou ton job</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Préserve ton temps libre</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Et surtout, garde le sourire</li>
                 </Col>
@@ -140,6 +151,8 @@ const Accueil = () => {
           className="section2__image"
           src={vanessaBureau}
           fluid
+          loading="lazy"
+          decoding="async"
         />
       </section>
       <section className="section3">
@@ -155,6 +168,8 @@ const Accueil = () => {
                   className="section3__main__image1"
                   src={abeillePfieuw}
                   fluid
+                  loading="lazy"
+                  decoding="async"
                 />
                 <h2 className="text-title">Continuer de ...</h2>
                 <p>
@@ -169,6 +184,8 @@ const Accueil = () => {
                   className="section3__main__image2"
                   src={abeilleTrapeze}
                   fluid
+                  loading="lazy"
+                  decoding="async"
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -194,6 +211,49 @@ const Accueil = () => {
         </main>
         <footer className="bg-primary-blue text-center py-4">
           <h2 className="text-title text-white">Avoir tout pour être heureux ne suffit pas pour l'être</h2>
+        </footer>
+      </section>
+      <section className="section4">
+        <header className="py-3" />
+        <main className="section4__main bg-primary-light-blue">
+          <Container>
+            <Row className="py-5">
+              <Col xs={12} md={8} className="section4__main__col1">
+                <h2 className="text-title text-primary-dark-blue">
+                  Bienvenue dans l'écosystème du
+                  bien-être pro des entrepreneurs, dirigeants & managers
+                </h2>
+                <h3 className="text-subtitle text-primary-dark-blue">
+                  Tu viens, on monte faire une tour ?
+                </h3>
+              </Col>
+              <Col xs={12} md={4}>
+                <Image
+                  className="section4__main__image"
+                  src={montgolfiereWhite}
+                  fluid
+                  loading="lazy"
+                  decoding="async"
+                />
+              </Col>
+            </Row>
+          </Container>
+        </main>
+        <footer className="section4__footer bg-primary-light-blue py-5">
+          <Icon
+            className="section4__footer__chevron"
+            path={mdiChevronDown}
+            size={2}
+            aria-label="Scroll to next section"
+            onClick={() => scrollToSection(section5)}
+          />
+          <Image
+            className="section4__footer__image"
+            src={cloodsRight}
+            fluid
+            loading="lazy"
+            decoding="async"
+          />
         </footer>
       </section>
     </div>
