@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown,
@@ -172,12 +173,12 @@ const Accueil = () => {
                   decoding="async"
                 />
                 <h2 className="text-title">Continuer de ...</h2>
-                <p>
-                  Subir ton quotidien.
-                  Suffoquer par la charge mentale, les doutes et le stress.
-                  Sacrifier ton temps libre et ta vie personnelle.
-                  Culpabiliser de te reposer.
-                </p>
+                <ul>
+                  <li>Subir ton quotidien.</li>
+                  <li>Suffoquer par la charge mentale,<br />les doutes et le stress.</li>
+                  <li>Sacrifier ton temps libre et ta vie personnelle.</li>
+                  <li>Culpabiliser de te reposer.</li>
+                </ul>
               </Col>
               <Col xs={12} md={4}>
                 <Image
@@ -191,10 +192,12 @@ const Accueil = () => {
               <Col xs={12} md={4}>
                 <h2 className="text-title text-primary-yellow">Changer</h2>
                 <h3 className="text-subtitle text-primary-yellow">pour...</h3>
-                <p className="fw-bold text-primary-dark-blue">Disposer de ton temps<br /><span className="fw-normal">et ne plus te laisser submerger</span></p>
-                <p className="fw-bold text-primary-dark-blue">Sculpter ton quotidien<br /><span className="fw-normal">comme tu l’entends</span></p>
-                <p className="fw-bold text-primary-dark-blue">Remettre de la légèreté<br /><span className="fw-normal">et du plaisir dans ta vie</span></p>
-                <p className="fw-bold text-primary-dark-blue">Retrouver le sourire</p>
+                <ul>
+                  <li className="fw-bold text-primary-dark-blue mb-2">Disposer de ton temps<br /><span className="fw-normal">et ne plus te laisser submerger</span></li>
+                  <li className="fw-bold text-primary-dark-blue mb-2">Sculpter ton quotidien<br /><span className="fw-normal">comme tu l’entends</span></li>
+                  <li className="fw-bold text-primary-dark-blue mb-2">Remettre de la légèreté<br /><span className="fw-normal">et du plaisir dans ta vie</span></li>
+                  <li className="fw-bold text-primary-dark-blue mb-2">Retrouver le sourire</li>
+                </ul>
               </Col>
             </Row>
             <Row>
@@ -203,7 +206,9 @@ const Accueil = () => {
                   className="section3__main__action-button text-action text-primary-dark-blue fs-2"
                   variant="primary-yellow"
                 >
-                  Réserve ta séance diagnostic (0€)
+                  <Link to="//calendly.com/vanessa-managetavie/seance-de-diagnostic-personnalise">
+                    Réserve ta séance diagnostic (0€)
+                  </Link>
                 </Button>
               </Col>
             </Row>
