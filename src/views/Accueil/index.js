@@ -320,6 +320,49 @@ const Accueil = () => {
                 </Card>
               </Col>
             </Row>
+            <Row className="section5__main__part2 my-5">
+              <header className="section5__header">
+                <h2 className="text-title text-primary-dark-blue">
+                  Les derniers épisodes du podcast
+                </h2>
+                <h3 className="text-subtitle text-primary-dark-blue">
+                  Trouve les réponses aux questions que tu te poses
+                </h3>
+              </header>
+              <Col xs={12} md={4} className="my-5">
+                <Link to="//podcast.managetavie.com/episode/8" target="_blank">
+                  <Image
+                    className="section5__main__part2__podcast-caption shadow-lg"
+                    src="https://managetavie.com/ressources/podcast/episode_8/ep8-caption.png"
+                    fluid
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+              </Col>
+              <Col xs={12} md={4} className="my-5">
+                <Link to="//podcast.managetavie.com/episode/7" target="_blank">
+                  <Image
+                    className="section5__main__part2__podcast-caption shadow-lg"
+                    src="https://managetavie.com/ressources/podcast/episode_7/ep7-caption.png"
+                    fluid
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+              </Col>
+              <Col xs={12} md={4} className="my-5">
+                <Link to="//podcast.managetavie.com/episode/6" target="_blank">
+                  <Image
+                    className="section5__main__part2__podcast-caption shadow-lg"
+                    src="https://managetavie.com/ressources/podcast/episode_6/ep6-caption.png"
+                    fluid
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+              </Col>
+            </Row>
           </main>
         </Container>
       </section>
