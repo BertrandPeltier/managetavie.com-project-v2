@@ -203,10 +203,14 @@ const Accueil = () => {
             <Row>
               <Col className="py-5 text-center">
                 <Button
-                  className="section3__main__action-button text-action text-primary-dark-blue fs-2"
+                  className="section3__main__action-button"
                   variant="primary-yellow"
                 >
-                  <Link to="//calendly.com/vanessa-managetavie/seance-de-diagnostic-personnalise">
+                  <Link
+                    className="text-action text-primary-dark-blue fs-2 text-primary-dark-blue"
+                    to="//calendly.com/vanessa-managetavie/seance-de-diagnostic-personnalise"
+                    target="_blank"
+                  >
                     Réserve ta séance diagnostic (0€)
                   </Link>
                 </Button>
