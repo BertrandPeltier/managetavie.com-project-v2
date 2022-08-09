@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
-  Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown,
+  Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown, Card,
 } from 'react-bootstrap/';
 // section1
 import Icon from '@mdi/react';
@@ -19,6 +19,9 @@ import abeilleTrapeze from './abeille-trapeze.webp';
 // section4
 import montgolfiereWhite from './montgolfiere-white.webp';
 import cloodsRight from './cloods-right.webp';
+// section5
+import abeilleSleep from './abeille-sleep.webp';
+import abeilleBuzy from './abeille-buzy.webp';
 
 import 'animate.css';
 import './styles.scss';
@@ -204,14 +207,14 @@ const Accueil = () => {
               <Col className="py-5 text-center">
                 <Button
                   className="section3__main__action-button"
-                  variant="primary-yellow"
+                  variant="secondary-yellow"
                 >
                   <Link
-                    className="text-action text-primary-dark-blue fs-2 text-primary-dark-blue"
+                    className="text-action text-primary-dark-blue fs-2"
                     to="//calendly.com/vanessa-managetavie/seance-de-diagnostic-personnalise"
                     target="_blank"
                   >
-                    Réserve ta séance diagnostic (0€)
+                    Réserve ta séance diagnostic 🎁
                   </Link>
                 </Button>
               </Col>
@@ -266,14 +269,59 @@ const Accueil = () => {
         </footer>
       </section>
       <section ref={section5} className="section5">
-        <header className="section5__header">
-          <h2 className="text-title text-primary-dark-blue">
-            Les ateliers
-          </h2>
-          <h3 className="text-subtitle text-primary-dark-blue">
-            Prends de la hauteur et trouve des solutions à tes problématiques
-          </h3>
-        </header>
+        <Container>
+
+          <main className="section5__main">
+            <Row className="section5__main__part1 my-5">
+              <header className="section5__header">
+                <h2 className="text-title text-primary-dark-blue">
+                  Les ateliers
+                </h2>
+                <h3 className="text-subtitle text-primary-dark-blue">
+                  Prends de la hauteur et trouve des solutions à tes problématiques
+                </h3>
+              </header>
+              <Col xs={12} md={5} className="my-5">
+                <Card className="shadow-lg">
+                  <Card.Body>
+                    <Card.Title className="text-action text-primary-dark-blue fs-1">
+                      Sleep like a babee
+                    </Card.Title>
+                    <Card.Text as="div" className="text-end">
+                      <Image
+                        className="section5__main__part1__image-left"
+                        src={abeilleSleep}
+                        fluid
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      Dis bye-bye aux insomnies et renoue avec un sommeil réparateur
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col xs={12} md={5} className="my-5">
+                <Card className="shadow-lg">
+                  <Card.Body>
+                    <Card.Title className="text-action text-primary-dark-blue fs-1">
+                      <span className="text-title text-associate-red">STOP</span> au débordement
+                    </Card.Title>
+                    <Card.Text>
+                      Sors du sentiment de débordement et remets du plaisir dans ton quotiien
+                      <Image
+                        className="section5__main__part1__image-right"
+                        src={abeilleBuzy}
+                        fluid
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </main>
+        </Container>
       </section>
     </div>
   );
