@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import {
@@ -26,7 +27,7 @@ import abeilleBuzy from './abeille-buzy.webp';
 import 'animate.css';
 import './styles.scss';
 
-const Accueil = () => {
+const Accueil = ({ loading, failed, episodes }) => {
   // Scroll to section 2
   const section2 = useRef();
   // Scroll to section 5
@@ -329,45 +330,52 @@ const Accueil = () => {
                   Trouve les réponses aux questions que tu te poses
                 </h3>
               </header>
-              <Col xs={12} md={4} className="my-5">
-                <Link to="/podcast/episode/8" target="_blank">
-                  <Image
-                    className="section5__main__part2__podcast-caption shadow-lg"
-                    src="https://managetavie.com/ressources/podcast/episode_8/ep8-caption.png"
-                    fluid
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </Link>
-              </Col>
-              <Col xs={12} md={4} className="my-5">
-                <Link to="/podcast/episode/7" target="_blank">
-                  <Image
-                    className="section5__main__part2__podcast-caption shadow-lg"
-                    src="https://managetavie.com/ressources/podcast/episode_7/ep7-caption.png"
-                    fluid
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </Link>
-              </Col>
-              <Col xs={12} md={4} className="my-5">
-                <Link to="/podcast/episode/6" target="_blank">
-                  <Image
-                    className="section5__main__part2__podcast-caption shadow-lg"
-                    src="https://managetavie.com/ressources/podcast/episode_6/ep6-caption.png"
-                    fluid
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </Link>
-              </Col>
+              {
+                loading ? (
+                  <div className="dot-container">
+                    <div className="dot-spin--blue" />
+                  </div>
+                ) : (
+                  (failed && (<p>Erreur de chargement, veuillez réactualiser la page</p>)) || (
+                    episodes.slice(0, 3).map((episode) => (
+                      <Col xs={12} md={4} className="my-5" key={episode.id}>
+                        <Link to={`/podcast/episode/${episode.id}`} target="_blank">
+                          <Image
+                            className="section5__main__part2__podcast-caption shadow-lg"
+                            src={episode.caption}
+                            alt={episode.title}
+                            fluid
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </Link>
+                      </Col>
+                    ))
+                  )
+                )
+              }
             </Row>
           </main>
         </Container>
       </section>
     </div>
   );
+};
+
+Accueil.propTypes = {
+  loading: PropTypes.bool,
+  failed: PropTypes.bool,
+  episodes: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    caption: PropTypes.string.isRequired,
+  })),
+};
+
+Accueil.defaultProps = {
+  loading: true,
+  failed: false,
+  episodes: [],
 };
 
 export default Accueil;
