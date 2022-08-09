@@ -330,7 +330,7 @@ const Accueil = () => {
                 </h3>
               </header>
               <Col xs={12} md={4} className="my-5">
-                <Link to="//podcast.managetavie.com/episode/8" target="_blank">
+                <Link to="/podcast/episode/8" target="_blank">
                   <Image
                     className="section5__main__part2__podcast-caption shadow-lg"
                     src="https://managetavie.com/ressources/podcast/episode_8/ep8-caption.png"
@@ -341,7 +341,7 @@ const Accueil = () => {
                 </Link>
               </Col>
               <Col xs={12} md={4} className="my-5">
-                <Link to="//podcast.managetavie.com/episode/7" target="_blank">
+                <Link to="/podcast/episode/7" target="_blank">
                   <Image
                     className="section5__main__part2__podcast-caption shadow-lg"
                     src="https://managetavie.com/ressources/podcast/episode_7/ep7-caption.png"
@@ -352,7 +352,7 @@ const Accueil = () => {
                 </Link>
               </Col>
               <Col xs={12} md={4} className="my-5">
-                <Link to="//podcast.managetavie.com/episode/6" target="_blank">
+                <Link to="/podcast/episode/6" target="_blank">
                   <Image
                     className="section5__main__part2__podcast-caption shadow-lg"
                     src="https://managetavie.com/ressources/podcast/episode_6/ep6-caption.png"
