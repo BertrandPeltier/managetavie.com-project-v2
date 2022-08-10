@@ -1,0 +1,13 @@
+@use 'src/styles/vars';
+
+.recorder {
+  @media screen and (min-width: 768px) {
+    width: 30rem;
+  }
+  &__header, &__footer {
+    background-color: vars.$secondary-blue;
+    color: vars.$primary-blue;
+    text-align: center;
+  }
+}
+

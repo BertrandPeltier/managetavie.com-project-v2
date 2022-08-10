@@ -9,7 +9,7 @@ import './styles.scss';
 const MainNavbar = () => (
   <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white main-navbar">
     <Container>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <Image
           className="main-navbar__logo"
           src={logoMTV}
@@ -18,20 +18,24 @@ const MainNavbar = () => (
           decoding="async"
         />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Toggle aria-controls="main-navbar" />
+      <Navbar.Collapse id="main-navbar">
         <Nav className="me-auto">
-          <Nav.Link href="#features">La méthode</Nav.Link>
-          <NavDropdown title="Accompagnements" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Happy'Culture</NavDropdown.Item>
+          <Nav.Link href="/methode">La méthode</Nav.Link>
+          <NavDropdown title="Accompagnements" id="accompagnments-dropdown">
+            <NavDropdown.Item href="/accompagnement/happy-culture">Happy'Culture</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.2">Bee'Zen</NavDropdown.Item>
+            <NavDropdown.Item href="/accompagnement/bee-zen">Bee'Zen</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#pricing">Manage ta Vie en entreprise</Nav.Link>
-          <Nav.Link href="#pricing">Contenus inspirants</Nav.Link>
-          <Nav.Link href="#pricing">Podcast</Nav.Link>
-          <Nav.Link href="#pricing">Ateliers</Nav.Link>
-          <Nav.Link href="#pricing">À propos</Nav.Link>
+          <Nav.Link href="/entreprise">Manage ta Vie en entreprise</Nav.Link>
+          <Nav.Link href="/contenus-inspirants">Contenus inspirants</Nav.Link>
+          <NavDropdown title="Podcast" id="podcast-dropdown">
+            <NavDropdown.Item href="/podcast">Les épidodes</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/podcast/recorder">Enregistrer une question</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link href="/ateliers">Ateliers</Nav.Link>
+          <Nav.Link href="/a-propos">À propos</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
