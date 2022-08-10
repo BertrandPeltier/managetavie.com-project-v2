@@ -129,7 +129,7 @@ const Accueil = ({ loading, failed, episodes }) => {
             <Container>
               <Row className="text-justify py-5 justify-content-center">
                 <Col md="auto" as="ul" className="text-title text-white fs-4">
-                  <li><Image src={checkbox} className="mx-3 mb-3" />Arrête de subir</li>
+                  <li><Image src={checkbox} className="mx-3 mb-3" />Arrête de subir ton quotidien</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Épanouis-toi dans ta boîte ou ton job</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Préserve ton temps libre</li>
                   <li><Image src={checkbox} className="mx-3 mb-3" />Et surtout, garde le sourire</li>
@@ -223,11 +223,11 @@ const Accueil = ({ loading, failed, episodes }) => {
           </Container>
         </main>
         <footer className="bg-primary-blue text-center py-4">
-          <h2 className="text-title text-white">Avoir tout pour être heureux ne suffit pas pour l'être</h2>
+          <h2 className="text-title text-white fs-1">Avoir tout pour être heureux ne suffit pas pour l'être</h2>
         </footer>
       </section>
       <section className="section4">
-        <header className="py-3" />
+        {/* <header className="py-5" /> */}
         <main className="section4__main bg-primary-light-blue">
           <Container>
             <Row className="py-5">
@@ -283,7 +283,7 @@ const Accueil = ({ loading, failed, episodes }) => {
                 </h3>
               </header>
               <Col xs={12} md={5} className="my-5">
-                <Card className="shadow-lg">
+                <Card className="shadow-lg bg-secondary-yellow">
                   <Card.Body>
                     <Card.Title className="text-action text-primary-dark-blue fs-1">
                       Sleep like a babee
@@ -302,7 +302,7 @@ const Accueil = ({ loading, failed, episodes }) => {
                 </Card>
               </Col>
               <Col xs={12} md={5} className="my-5">
-                <Card className="shadow-lg">
+                <Card className="shadow-lg bg-secondary-yellow">
                   <Card.Body>
                     <Card.Title className="text-action text-primary-dark-blue fs-1">
                       <span className="text-title text-associate-red">STOP</span> au débordement

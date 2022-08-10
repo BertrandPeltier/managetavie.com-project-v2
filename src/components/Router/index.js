@@ -26,11 +26,11 @@ const Router = () => {
       />
       <Route
         path="/podcast"
-        element={<Podcast />}
+        element={<Podcast loading={loading} failed={failed} episodes={data.episodes} />}
       />
       <Route
         path="/podcast/episode/:episodeId"
-        element={<Episode />}
+        element={<Episode loading={loading} failed={failed} episodes={data.episodes} />}
       />
     </Routes>
   );

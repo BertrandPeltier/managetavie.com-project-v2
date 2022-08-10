@@ -1,21 +1,13 @@
 import React from 'react';
-import useFetchData from 'src/hooks/useFetchData';
-import { podcast } from 'src/api';
+import PropTypes from 'prop-types';
 
 import PodcastPlaylist from 'src/components/PodcastPlaylist';
 
 import './styles.scss';
 
-const Podcast = () => {
-  const { get } = podcast;
-  const {
-    data,
-    loading,
-    failed,
-  } = useFetchData(get, '/episode/all');
-  return (
-    <>
-      {
+const Podcast = ({ loading, failed, episodes }) => (
+  <>
+    {
         loading ? (
           <div className="dot-container">
             <div className="dot-spin--blue" />
@@ -23,12 +15,27 @@ const Podcast = () => {
         ) : (
           <>
             <h1>Podcast</h1>
-            <PodcastPlaylist episodes={data.episodes} />
+            <PodcastPlaylist episodes={episodes} />
           </>
         )
       }
-    </>
-  );
+  </>
+);
+
+Podcast.propTypes = {
+  loading: PropTypes.bool,
+  failed: PropTypes.bool,
+  episodes: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    caption: PropTypes.string.isRequired,
+  })),
+};
+
+Podcast.defaultProps = {
+  loading: true,
+  failed: false,
+  episodes: [],
 };
 
 export default Podcast;
