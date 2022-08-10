@@ -1,32 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {
+  Container,
+} from 'react-bootstrap/';
+import MainNavbar from 'src/components/MainNavbar';
 import PodcastPlaylist from 'src/components/PodcastPlaylist';
 
 import './styles.scss';
 
 const Podcast = ({ loading, failed, episodes }) => (
-  <>
-    {
-      loading && (
-        <div className="dot-container">
-          <div className="dot-spin--blue" />
-        </div>
-      )
-    }
-    {
-      !loading && !failed && episodes && (
-        <>
-          <PodcastPlaylist episodes={episodes} />
-        </>
-      )
-    }
-    {
-      failed && (
-        <p>Erreur de chargement, veuillez réactualiser la page</p>
-      )
-    }
-  </>
+  <div className="podcast-view">
+    <MainNavbar />
+    <Container>
+      {
+        loading && (
+          <div className="dot-container">
+            <div className="dot-spin--blue" />
+          </div>
+        )
+      }
+      {
+        !loading && !failed && episodes && (
+          <>
+            <PodcastPlaylist episodes={episodes} />
+          </>
+        )
+      }
+      {
+        failed && (
+          <p>Erreur de chargement, veuillez réactualiser la page</p>
+        )
+      }
+    </Container>
+  </div>
 );
 
 Podcast.propTypes = {

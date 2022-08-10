@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useParams, Navigate } from 'react-router-dom';
 
+import {
+  Container,
+} from 'react-bootstrap/';
+import MainNavbar from 'src/components/MainNavbar';
 import PodcastEpisode from 'src/components/PodcastEpisode';
 
 import './styles.scss';
@@ -9,34 +13,36 @@ import './styles.scss';
 const Episode = ({ loading, failed, episodes }) => {
   const { episodeId } = useParams();
   return (
-    <>
-      {
-        loading && (
-          <div className="dot-container">
-            <div className="dot-spin--blue" />
-          </div>
-        )
-      }
-      {
-        !loading && !failed && episodes && (
-          <>
-            <h1>Podcast n°{episodeId}</h1>
-            {
-              episodeId === 'last' || episodes.find((episode) => episode.id === Number(episodeId)) ? (
-                <PodcastEpisode episodes={episodes} />
-              ) : (
-                <Navigate replace to="/podcast" />
-              )
-            }
-          </>
-        )
-      }
-      {
-        failed && (
-          <p>Erreur de chargement, veuillez réactualiser la page</p>
-        )
-      }
-    </>
+    <div className="episode-view">
+      <MainNavbar />
+      <Container>
+        {
+          loading && (
+            <div className="dot-container">
+              <div className="dot-spin--blue" />
+            </div>
+          )
+        }
+        {
+          !loading && !failed && episodes && (
+            <>
+              {
+                episodeId === 'last' || episodes.find((episode) => episode.id === Number(episodeId)) ? (
+                  <PodcastEpisode episodes={episodes} />
+                ) : (
+                  <Navigate replace to="/podcast" />
+                )
+              }
+            </>
+          )
+        }
+        {
+          failed && (
+            <p>Erreur de chargement, veuillez réactualiser la page</p>
+          )
+        }
+      </Container>
+    </div>
   );
 };
 

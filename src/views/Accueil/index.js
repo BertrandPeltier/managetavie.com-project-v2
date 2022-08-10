@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import {
-  Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown, Card,
+  Container, Row, Col, Image, Button, Card,
 } from 'react-bootstrap/';
+import MainNavbar from 'src/components/MainNavbar';
 import PodcastPlaylist from 'src/components/PodcastPlaylist';
 // section1
 import Icon from '@mdi/react';
@@ -13,7 +14,6 @@ import montgolfiere from './montgolfiere.webp';
 import cloods from './cloods.webp';
 // section2
 import checkbox from './checkbox.webp';
-import logoMTV from './logo-managetavie.webp';
 import vanessaBureau from './vanessa-bureau.webp';
 // section3
 import abeillePfieuw from './abeille-pfieuw.webp';
@@ -38,7 +38,7 @@ const Accueil = ({ loading, failed, episodes }) => {
   };
 
   return (
-    <div className="accueil">
+    <div className="accueil-view">
       <section className="section1  bg-primary-blue">
         <Container className="section1__main" as="main">
           <Row xs={1} md={2}>
@@ -82,35 +82,7 @@ const Accueil = ({ loading, failed, episodes }) => {
           <div className="section1__footer__white-stripe" />
         </footer>
       </section>
-      <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white main-navbar">
-        <Container>
-          <Navbar.Brand href="#home">
-            <Image
-              className="main-navbar__logo"
-              src={logoMTV}
-              fluid
-              loading="lazy"
-              decoding="async"
-            />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">La méthode</Nav.Link>
-              <NavDropdown title="Accompagnements" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Happy'Culture</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.2">Bee'Zen</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#pricing">Manage ta Vie en entreprise</Nav.Link>
-              <Nav.Link href="#pricing">Contenus inspirants</Nav.Link>
-              <Nav.Link href="#pricing">Podcast</Nav.Link>
-              <Nav.Link href="#pricing">Ateliers</Nav.Link>
-              <Nav.Link href="#pricing">À propos</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <MainNavbar />
       <section ref={section2} className="section2">
         <header className="section2__header" />
         <main className="section2__main">
