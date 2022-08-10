@@ -176,7 +176,7 @@ const PodcastEpisode = ({ episodes }) => {
         <Card.Link
           className="back-link"
           onClick={() => {
-            navigate('/');
+            navigate('/podcast');
           }}
         >
           <Icon

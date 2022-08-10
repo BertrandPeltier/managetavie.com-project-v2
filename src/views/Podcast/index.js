@@ -8,17 +8,24 @@ import './styles.scss';
 const Podcast = ({ loading, failed, episodes }) => (
   <>
     {
-        loading ? (
-          <div className="dot-container">
-            <div className="dot-spin--blue" />
-          </div>
-        ) : (
-          <>
-            <h1>Podcast</h1>
-            <PodcastPlaylist episodes={episodes} />
-          </>
-        )
-      }
+      loading && (
+        <div className="dot-container">
+          <div className="dot-spin--blue" />
+        </div>
+      )
+    }
+    {
+      !loading && !failed && episodes && (
+        <>
+          <PodcastPlaylist episodes={episodes} />
+        </>
+      )
+    }
+    {
+      failed && (
+        <p>Erreur de chargement, veuillez réactualiser la page</p>
+      )
+    }
   </>
 );
 

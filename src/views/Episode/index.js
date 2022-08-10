@@ -33,7 +33,7 @@ const Episode = ({ loading, failed, episodes }) => {
       }
       {
         failed && (
-          <h1>ERREUR !!!</h1>
+          <p>Erreur de chargement, veuillez réactualiser la page</p>
         )
       }
     </>

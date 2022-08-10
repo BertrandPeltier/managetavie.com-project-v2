@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   Container, Row, Col, Image, Button, Navbar, Nav, NavDropdown, Card,
 } from 'react-bootstrap/';
+import PodcastPlaylist from 'src/components/PodcastPlaylist';
 // section1
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
@@ -64,6 +65,12 @@ const Accueil = ({ loading, failed, episodes }) => {
             </Col>
           </Row>
         </Container>
+        <Image
+          className="section1__cloods"
+          src={cloods}
+          loading="lazy"
+          decoding="async"
+        />
         <footer className="section1__footer">
           <Icon
             className="section1__footer__chevron mb-5"
@@ -74,12 +81,6 @@ const Accueil = ({ loading, failed, episodes }) => {
           />
           <div className="section1__footer__white-stripe" />
         </footer>
-        <Image
-          className="section1__cloods"
-          src={cloods}
-          loading="lazy"
-          decoding="async"
-        />
       </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-white main-navbar">
         <Container>
@@ -331,27 +332,22 @@ const Accueil = ({ loading, failed, episodes }) => {
                 </h3>
               </header>
               {
-                loading ? (
+                loading && (
                   <div className="dot-container">
                     <div className="dot-spin--blue" />
                   </div>
-                ) : (
-                  (failed && (<p>Erreur de chargement, veuillez réactualiser la page</p>)) || (
-                    episodes.slice(0, 3).map((episode) => (
-                      <Col xs={12} md={4} className="my-5" key={episode.id}>
-                        <Link to={`/podcast/episode/${episode.id}`} target="_blank">
-                          <Image
-                            className="section5__main__part2__podcast-caption shadow-lg"
-                            src={episode.caption}
-                            alt={episode.title}
-                            fluid
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </Link>
-                      </Col>
-                    ))
-                  )
+                )
+              }
+              {
+                !loading && !failed && episodes && (
+                  <>
+                    <PodcastPlaylist episodes={episodes.slice(0, 3)} />
+                  </>
+                )
+              }
+              {
+                failed && (
+                  <p>Erreur de chargement, veuillez réactualiser la page</p>
                 )
               }
             </Row>
