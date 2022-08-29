@@ -7,6 +7,7 @@ import {
 } from 'react-bootstrap/';
 import MainNavbar from 'src/components/MainNavbar';
 import PodcastPlaylist from 'src/components/PodcastPlaylist';
+import NewsletterForm from 'src/components/NewsletterForm';
 // section1
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
@@ -27,6 +28,7 @@ import abeilleBuzy from './abeille-buzy.webp';
 
 import 'animate.css';
 import './styles.scss';
+import { Next } from 'react-bootstrap/esm/PageItem';
 
 const Accueil = ({ loading, failed, episodes }) => {
   // Scroll to section 2
@@ -326,6 +328,10 @@ const Accueil = ({ loading, failed, episodes }) => {
           </main>
         </Container>
       </section>
+      <section className="section6">
+        <NewsletterForm />
+      </section>
+
     </div>
   );
 };
