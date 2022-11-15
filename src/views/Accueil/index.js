@@ -28,7 +28,6 @@ import abeilleBuzy from './abeille-buzy.webp';
 
 import 'animate.css';
 import './styles.scss';
-import { Next } from 'react-bootstrap/esm/PageItem';
 
 const Accueil = ({ loading, failed, episodes }) => {
   // Scroll to section 2
